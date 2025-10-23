@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Dispute Demo</title>
+</head>
+<body>
+
+    <h1>Welcome to the Client Demo Site</h1>
+    <p>Below is the embedded, non-functional Transaction Dispute Form.</p>
+
+    <div id="cmWfContainer" style="margin: 0 auto; width: 100%; overflow: hidden;"></div>
+    <script>
+      (function() {
+        window.TD_CM_WEB_FORM_ENV = {
+          key: "58ba455868d74a9ab8a62396ac27a0b0",
+          region: "us",
+          release_stage: "prd",
+          src_prefix: "https://prd-cdn-talkdesk.talkdesk.com/case-management-ui/latest",
+          /*
+           * Use 'auto' to make the container height adaptive to its content.
+           * Or set a fixed value (e.g., '500px') to fix the container height.
+           */
+          container_height: "auto",
+        };
+        var scriptElement = document.createElement("script");
+        scriptElement.src = "https://prd-cdn-talkdesk.talkdesk.com/case-management-ui/latest/web-form/index.js?_=" + Math.random();
+        document.body.appendChild(scriptElement);
+      })();
+    </script>
+    </body>
+</html>
