@@ -59,12 +59,26 @@
             <p>Please use the official Talkdesk Credit Union form below to submit a dispute claim for a recent transaction.</p>
             
             <div class="embed-container">
-                <div style="background-color: #f0f0f0; padding: 50px; border-radius: 8px; margin: 20px auto; max-width: 600px;">
-                    <p style="text-align: center; color: #666;">
-                        [Placeholder: Your Talkdesk Dispute Form will load here once the embed code is pasted.]
-                    </p>
+                <div id="cmWfContainer" style="margin: 0 auto; width: 100%; overflow: hidden;"></div>
+                <script>
+                  (function() {
+                    window.TD_CM_WEB_FORM_ENV = {
+                      key: "58ba455868d74a9ab8a62396ac27a0b0",
+                      region: "us",
+                      release_stage: "prd",
+                      src_prefix: "https://prd-cdn-talkdesk.talkdesk.com/case-management-ui/latest",
+                      /*
+                       * Use 'auto' to make the container height adaptive to its content.
+                       * Or set a fixed value (e.g., '500px') to fix the container height.
+                       */
+                      container_height: "auto",
+                    };
+                    var scriptElement = document.createElement("script");
+                    scriptElement.src = "https://prd-cdn-talkdesk.talkdesk.com/case-management-ui/latest/web-form/index.js?_=" + Math.random();
+                    document.body.appendChild(scriptElement);
+                  })();
+                </script>
                 </div>
-            </div>
         </section>
         <section id="about" class="content-section">
             <h2>About Talkdesk Credit Union</h2>
