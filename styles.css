@@ -1,0 +1,221 @@
+/* Color Palette (Talkdesk Inspired) */
+:root {
+    --primary-purple: #5527f6; /* A vibrant, deep purple */
+    --secondary-purple: #7f52f4; /* Lighter purple for accents */
+    --background-light: #f4f6fa;
+    --text-dark: #333;
+    --text-light: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-purple);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-purple);
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--text-light);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-purple);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--text-dark);
+    font-weight: 400;
+    padding: 5px 0;
+}
+
+/* Call-to-Action (CTA) Button in Nav */
+.cta-button a {
+    background-color: var(--primary-purple);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.cta-button a:hover {
+    background-color: var(--secondary-purple);
+    color: var(--text-light); /* Maintain white text on hover */
+}
+
+/* Buttons (General) */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.primary-btn {
+    background-color: var(--primary-purple);
+    color: var(--text-light);
+}
+
+.primary-btn:hover {
+    background-color: var(--secondary-purple);
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: var(--text-light);
+    color: var(--primary-purple);
+    border: 2px solid var(--primary-purple);
+}
+
+.secondary-btn:hover {
+    background-color: var(--background-light);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--secondary-purple);
+    color: var(--text-light);
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: var(--primary-purple);
+}
+
+.purple-bg {
+    background-color: var(--primary-purple);
+    color: var(--text-light);
+}
+
+.purple-bg h2 {
+    color: var(--text-light);
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--text-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--primary-purple);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-dark);
+    color: var(--background-light);
+    padding: 20px 5%;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--secondary-purple);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
